@@ -33,12 +33,13 @@
                 </div>
 
                 <div class="task-container">
-                    <ul>
-                        <li class="task-item" v-for="task in tasks">
+                    <ul v-if="tasks.length > 0">
+                        <li class="task-item" v-for="(task,index) in tasks">
                             {{task.text}}
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
                         </li>
                     </ul>
+                    <h2 v-else>Non ci sono task</h2>
                 </div>
             </div>
         </div>        
