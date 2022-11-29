@@ -41,6 +41,7 @@ createApp({
         }
     },
     mounted() { 
+
         this.loaded = true;           
     },
 
