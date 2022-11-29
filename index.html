@@ -28,7 +28,7 @@
                     <input type="text" placeholder="new Task" v-model="newTask">
                     <button class="btn btn-primary btn-block" id="btn-new-task" @click="addTask">INVIA</button>
                     <div v-if="error" class="error">
-                        <span>Task is required.</span>
+                        <span style="color:red">Inserire una task di almeno 5 caratteri</span>
                     </div>
                 </div>
 

@@ -17,7 +17,7 @@ createApp({
     {
         addTask(){
             if (this.newTask.length < 5) {
-                error = true;
+                this.error = true;
             }else {
                 this.tasks.unshift({ text: this.newTask, done: false })
             }
