@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="new-task">
-                    <input type="text" placeholder="new Task" v-model="newTask">
+                    <input type="text" placeholder="new Task" v-model="newTask" @keyup.enter="addTask">
                     <button class="btn btn-primary btn-block" id="btn-new-task" @click="addTask">INVIA</button>
                     <div v-if="error" class="error">
                         <span style="color:red">Inserire una task di almeno 5 caratteri</span>

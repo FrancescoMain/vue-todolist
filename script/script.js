@@ -20,6 +20,8 @@ createApp({
                 this.error = true;
             }else {
                 this.tasks.unshift({ text: this.newTask, done: false })
+                this.error = false;
+                this.newTask = "";
             }
 
         }
