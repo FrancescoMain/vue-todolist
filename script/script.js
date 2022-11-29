@@ -3,6 +3,7 @@ const { createApp } = Vue ;
 createApp({
     data() {
         return{
+            loaded:false,
             logoImage: "img/pngwing.com.png",
             error: false,
             newTask:"",
@@ -10,7 +11,9 @@ createApp({
                 { text: 'Fare i compiti', done: false }, 
                 { text: 'Fare la spesa', done: true }, 
                 { text: 'Fare il bucato', done: false }
-                ]
+                ],
+            unDoneText :"Fatto",
+            doneText :"Da Fare"
         }
     },
     methods: 
@@ -27,9 +30,18 @@ createApp({
         },
         deleteTask(index){
             this.tasks.splice(index, 1);
+        },
+        done(index){
+            if (this.tasks[index].done) {
+                this.tasks[index].done = false
+            } else  {
+                this.tasks[index].done = true;
+            }
+
         }
     },
-    mounted() {            
+    mounted() { 
+        this.loaded = true;           
     },
 
         
